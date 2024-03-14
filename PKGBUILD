@@ -9,7 +9,7 @@ _url="https://gitea.com/KnoyanMitsu"
 license=('CC-BY-SA')
 source=("$_url/$pkgname/archive/refs/tags/v$pkgver.tar.gz")
 
-sha256sums=('10edf5e360457fbc7ecf1d250974f4bbfb8b00c6d7e64e52ace802d010333f17')
+sha256sums=('1dc826ec54d8751bae89cb9604327a150d62b6d73d68bb041ce1b7e788d6f2d3')
 
 package() {
 
