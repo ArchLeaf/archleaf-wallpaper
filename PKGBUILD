@@ -13,14 +13,16 @@ sha256sums=('1dc826ec54d8751bae89cb9604327a150d62b6d73d68bb041ce1b7e788d6f2d3')
 
 package() {
 
-	cd "$srcdir/$pkgname-$pkgver/$_pkgname"
+	cd "$srcdir/$pkgname/ArchLeaf-Pack"
 
 	# Creating needed directories
 	install -dm755 "${pkgdir}/usr/share/backgrounds/$_pkgname/"
+		install -dm755 "${pkgdir}/usr/share/wallpapers/$_pkgname/"
 
 	# Wallpapers
 	local wallpaper
 	for wallpaper in *; do
-		install -m755 "$srcdir/$pkgname-$pkgver/$_pkgname/${wallpaper}" "$pkgdir/usr/share/backgrounds/$_pkgname/${wallpaper}"
+		install -m755 "$srcdir/$pkgname/ArchLeaf-Pack/${wallpaper}" "$pkgdir/usr/share/backgrounds/$_pkgname/${wallpaper}"
+		install -m755 "$srcdir/$pkgname/ArchLeaf-Pack/${wallpaper}" "$pkgdir/usr/share/wallpapers/$_pkgname/${wallpaper}"
 	done
 }
